@@ -1,0 +1,53 @@
+<!-- Карточки -->
+  	<section>
+  		<div class="container">
+  			<h1 class="text-3">Xizmat ko'rsatish paketlari</h1>
+  			<div class="row justify-content-center">
+  				<div class="card product_card" style="width: 18rem; background-color: #33CCFF;">
+				  <div class="card-body">
+				    <h5 class="card-title">Platinum</h5>
+				    <p class="card-text">Windows, office, Drayver, Baza sozlamalari</p>
+				    <h3>{{ pc_1 }} so'm.</h3>
+				  </div>
+				</div>
+				<div class="card product_card" style="width: 18rem; background-color: #FF9900;">
+				  <div class="card-body">
+				    <h5 class="card-title">Silver</h5>
+				    <p class="card-text">Windows, office, Antivirus, Drayver va boshqalar.</p>
+				    <h3>{{ pc_2 }} so'm.</h3>
+				  </div>
+				</div>
+				<div class="card product_card" style="width: 18rem; background-color: #66FF66;">
+				  <div class="card-body">
+				    <h5 class="card-title">Gold</h5>
+				    <p class="card-text">Windows, 20 gacha dasturlar, antivirus, barcha drayverlar va boshqalar.</p>
+				    <h3>{{ pc_3 }} so'm.</h3>
+				  </div>
+				</div>
+  			</div>
+  		</div>
+  	</section>
+  	<!-- Таблица -->
+  	<section>
+  		<div class="container">
+  			<h1 class="text-3">Xizmat ko'rsatish narxlari</h1>
+  			<table class="table table_one">
+			  <thead class="alert-success">
+			    <tr>
+			      <th scope="col">Xizmat ko'rsatish</th>
+			      <th scope="col">Eski narx</th>
+			      <th scope="col">Yangi narx</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+              {% for obj in price_table %}
+			    <tr>
+			      <td>{{ obj.pt_title }}</td>
+			      <td><del>{{ obj.pt_old_price }}</del></td>
+			      <td>{{ obj.pt_new_price }}</td>
+			    </tr>
+              {% endfor %}
+			  </tbody>
+			</table>
+  		</div>
+  	</section>
